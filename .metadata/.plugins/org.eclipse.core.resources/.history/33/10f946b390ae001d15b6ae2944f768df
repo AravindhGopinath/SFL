@@ -1,0 +1,103 @@
+package org.sanity.run;
+
+
+import org.base.BaseClass;
+import org.loactors.Homepage_Locators;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class FD_Calculator extends BaseClass {
+
+	@BeforeTest
+	public void browserLaunch() {
+
+		launchBrowser("chrome");
+		loadUrl("https://beta.shriram.com/");
+	}
+
+	@Test
+	public static void fd_Calculator_Execution() throws InterruptedException {
+
+		WebDriverWait wait = new WebDriverWait(driver, 25);
+
+		Homepage_Locators homepageLocators = new Homepage_Locators();
+
+		Actions act = new Actions(driver);
+
+		act.moveToElement(homepageLocators.getCalcualtor_Accordian()).build().perform();
+		
+		act.click(homepageLocators.getHomepage_FD_Calculator_button()).build().perform();
+		
+		wait.until(ExpectedConditions.elementToBeClickable(homepageLocators.getFD_Calculator_fd_calc_tab()));
+		
+		act.moveToElement(homepageLocators.getFD_Calculator_fd_calc_tab()).build().perform();
+		
+		act.moveToElement(homepageLocators.getFD_Calculator_Interest_payout_term_dropdown()).build().perform();
+		
+		WebElement fd_Calculator_Maturity_Value = homepageLocators.getFD_Calculator_Maturity_Value();
+
+		String Onload_fd_Calculator_Maturity_Value = fd_Calculator_Maturity_Value.getText();
+		
+		String Onload_fd_Calculator_Maturity_Valuee = Onload_fd_Calculator_Maturity_Value.replaceAll("[₹ ,]","");
+
+		System.out.println("Onload Maturity Value is"+Onload_fd_Calculator_Maturity_Valuee);
+		
+		WebElement fd_Calculator_Investment_Amount_Textbox = homepageLocators.getFD_Calculator_Investment_Amount_Textbox();
+		
+		act.doubleClick(fd_Calculator_Investment_Amount_Textbox).build().perform();
+
+		act.sendKeys(fd_Calculator_Investment_Amount_Textbox, Keys.CLEAR);
+		
+		fd_Calculator_Investment_Amount_Textbox.sendKeys(Keys.BACK_SPACE);
+
+		fd_Calculator_Investment_Amount_Textbox.sendKeys("50000");
+		
+		fd_Calculator_Investment_Amount_Textbox.sendKeys(Keys.ENTER);
+		
+		homepageLocators.getFD_Calculator_step_03().click();
+
+		String Postchange_fd_Calculator_Maturity_Value = fd_Calculator_Maturity_Value.getText();
+
+		String Postchange_fd_Calculator_Maturity_Valuee = Postchange_fd_Calculator_Maturity_Value.replaceAll("[₹ ,]", "");
+		
+		System.out.println(Postchange_fd_Calculator_Maturity_Valuee);
+		
+		act.doubleClick(fd_Calculator_Investment_Amount_Textbox).build().perform();
+
+		act.sendKeys(fd_Calculator_Investment_Amount_Textbox, Keys.CLEAR);
+		
+		fd_Calculator_Investment_Amount_Textbox.sendKeys(Keys.BACK_SPACE);
+
+		fd_Calculator_Investment_Amount_Textbox.sendKeys("5000");
+		
+		fd_Calculator_Investment_Amount_Textbox.sendKeys(Keys.ENTER);
+		
+		homepageLocators.getFD_Calculator_step_03().click();
+		
+		String revert_change_fd_Calculator_Maturity_Value = fd_Calculator_Maturity_Value.getText();
+
+		String revert_change_fd_Calculator_Maturity_Valuee = revert_change_fd_Calculator_Maturity_Value.replaceAll("[₹ ,]", "");
+		
+		System.out.println(revert_change_fd_Calculator_Maturity_Valuee);
+		
+		
+		
+		if (Onload_fd_Calculator_Maturity_Valuee!=Postchange_fd_Calculator_Maturity_Valuee&&Onload_fd_Calculator_Maturity_Valuee==revert_change_fd_Calculator_Maturity_Valuee) {
+			
+			System.out.println("Fixed deposit calculator's invest amount field is working fine");
+			
+		} else {
+
+			System.out.println("Fixed deposit calculator's invest amount field isn't working ");
+		}
+		
+		
+		
+		
+}
+}

@@ -1,0 +1,22 @@
+package org.run;
+
+import org.base.BaseClass;
+import org.testng.annotations.Test;
+
+public class Execution extends BaseClass{
+
+	@Test
+	private void launch() {
+
+		headless("firefox");
+		
+		loadUrl("https://greatplacetowork.in/great/company/novac-technology-solutions-private-limited");
+	
+		String title = driver.getTitle();
+		
+		System.out.println("Print : "+title);
+		
+	}
+	
+	
+}

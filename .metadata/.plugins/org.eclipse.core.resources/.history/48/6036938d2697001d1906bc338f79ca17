@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package org.api.test;
+
+/**
+ * @author a1354
+ *
+ */
+public class RestAssuredd {
+
+	private void demo() {
+
+		RestAssured
+	}
+	
+	
+	
+}

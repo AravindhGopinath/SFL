@@ -1,0 +1,85 @@
+package org.run;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Iterator;
+import org.base.BaseClass;
+import org.excel.ExcelUtils;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class Accurate_Broken_Eight_Nov extends BaseClass {
+
+	@BeforeTest
+	public void browserLaunch() {
+
+		launchBrowser("chrome");
+	}
+
+	@AfterTest
+	public void quitBrowse() {
+		driver.quit();
+	}
+
+//	@DataProvider
+//	public Iterator<Object[]> getTestData() {
+//
+//		ArrayList<Object[]> testData = ExcelUtils.getDataFromexcel();
+//		return testData.iterator();
+//
+//	}
+
+//	(dataProvider = "getTestData")
+	
+	@Test
+	public void runner(String INDEX, String Slug_URL) throws Exception {
+
+		String homePage = "https://www.shriram.com";
+		loadUrl(Slug_URL);
+		String url =Slug_URL;
+		if (url == null || url.isEmpty()) {
+			System.out.println(url + " URL is either not configured for anchor tag or it is empty");
+//			int parseInt = Integer.parseInt(INDEX);
+//			 ExcelUtils.writeinexcel(url + " URL is either not configured for anchor tag or it is empty", parseInt);
+		}
+
+		if (!url.startsWith(homePage)) {
+			System.out.println(url + " URL belongs to another domain, skipping it.");
+//			int parseInt = Integer.parseInt(INDEX);
+//			 ExcelUtils.writeinexcel(url + " URL belongs to another domain, skipping it.", parseInt);
+		}
+
+		try {
+			URL urll = new URL(Slug_URL);
+
+			// Now we will be creating url connection and getting the response code
+			HttpURLConnection httpURLConnect = (HttpURLConnection) urll.openConnection();
+			httpURLConnect.setConnectTimeout(5000);
+			httpURLConnect.connect();
+			int responseCode = httpURLConnect.getResponseCode();
+			String responseMessage = httpURLConnect.getResponseMessage();
+			// System.out.println(responseCode+" => "+responseMessage);
+			String string = Integer.toString(responseCode);
+
+			if (responseCode >= 400) {
+				System.out.println(Slug_URL + " - " + responseCode+" ==> "+responseMessage + " and it's a broken link");
+//				int parseInt = Integer.parseInt(INDEX);
+//				 ExcelUtils.writeinexcel(responseCode+" ==> "+responseMessage + " and it's a broken link", parseInt);
+			} else if (string.isEmpty() || string == null) {
+				System.out.println("The page doesn't contain status code");
+//				int parseInt = Integer.parseInt(INDEX);
+//				 ExcelUtils.writeinexcel("The page doesn't contain status code", parseInt);
+			}
+			// Fetching and Printing the response code obtained
+			else {
+				System.out.println(Slug_URL + " - " + responseCode+" ==> "+responseMessage);
+//				int parseInt = Integer.parseInt(INDEX);
+//				 ExcelUtils.writeinexcel(responseCode+" ==> "+responseMessage, parseInt);
+			}
+		} catch (Exception e) {
+		}
+	}
+}

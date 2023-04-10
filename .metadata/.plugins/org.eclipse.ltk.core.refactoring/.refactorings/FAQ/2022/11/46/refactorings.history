@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;FAQ/src/main/java/org.excel.gtm&apos;&#x0D;&#x0A;- Original project: &apos;FAQ&apos;&#x0D;&#x0A;- Destination element: &apos;FAQ/src/main/java/org.excel.gtm&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     org.excel.ExcelUtils.java&#x0D;&#x0A;     org.excel.ReadExcel.java" description="Copy compilation units" destination="/src\/main\/java&lt;org.excel.gtm" element1="/src\/main\/java&lt;org.excel{ExcelUtils.java" element2="/src\/main\/java&lt;org.excel{ReadExcel.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1667987725009" units="2" version="1.0"/>
+</session>

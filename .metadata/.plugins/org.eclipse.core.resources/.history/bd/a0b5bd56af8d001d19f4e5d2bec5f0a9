@@ -1,0 +1,28 @@
+package Calculator;
+
+import java.util.Scanner;
+
+public class Business_Loan_Calculator {
+
+	public static void main(String[] args) {
+
+		String ATO = "Annual Turnover";
+
+		System.out.println("Enter user's " + ATO + ": ");
+		Scanner s = new Scanner(System.in);
+		int nextLine = s.nextInt();
+		System.out.println("Your " + ATO + " is " + nextLine);
+
+		
+		
+//		int a = 4000000;
+//		int b = 10000000;
+//		
+//		if (a<=b) {
+//			
+//			System.out.println("15%");
+//		}
+		
+		
+	}
+}

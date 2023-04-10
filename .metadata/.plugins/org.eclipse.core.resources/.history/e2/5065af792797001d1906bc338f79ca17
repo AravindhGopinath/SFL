@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package org.api.test;
+
+import io.restassured.RestAssured;
+
+/**
+ * @author a1354
+ *
+ */
+public class RestAssuredd {
+
+	private void demo() {
+
+		RestAssured.baseURI="";
+		RestAssured.given();
+	}
+	
+	
+	
+}

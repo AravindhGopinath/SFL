@@ -1,0 +1,17 @@
+package org.chrome.launch;
+
+  
+public class Browser_Launch {
+    public static void main(String args[]){
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\a1354\\Downloads\\chromedriver_win32 (5)\\chromedriver.exe");
+        // Instantiate a ChromeDriver class.
+        
+        WebDriver driver = new ChromeDriver();
+  
+        // Maximize the browser
+        driver.manage().window().maximize();
+  
+        // Launch Website
+        driver.get("https://www.geeksforgeeks.org/");
+    }
+}

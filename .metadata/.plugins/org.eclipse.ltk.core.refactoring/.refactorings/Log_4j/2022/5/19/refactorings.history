@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BasicConfigureType.java&apos; to &apos;Log_4J_/src/Basic_Configure_Type&apos;&#x0D;&#x0A;- Original project: &apos;Log_4j&apos;&#x0D;&#x0A;- Destination element: &apos;Log_4J_/src/Basic_Configure_Type&apos;&#x0D;&#x0A;- Original element: &apos;org.log4j.BasicConfigureType.java&apos;" description="Copy compilation unit" destination="=Log_4J_/src&lt;Basic_Configure_Type" element1="/src\/test\/java&lt;org.log4j{BasicConfigureType.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1651856952779" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,18 @@
+Feature: Visit career guide page in uat.shriramcity.in
+	
+  Scenario Outline: Visit uat.shriramcity.in
+    Given  user applies gold loan
+    When   user enter details from given sheetname "<SheetName>" and rownumber <RowNumber>
+    And    User finally apply loan "<SheetName>" and rownumber <RowNumber>
+    Then   Page takes to otp verification "<SheetName>" and rownumber <RowNumber>
+    Examples:
+      | SheetName   | RowNumber |
+      | Sheet1      | 0         |
+
+
+		ExcelReader reader =new ExcelReader();
+		List<Map<String,String>> td = reader.getData("Gold_Loan_Testdata.xlsx", "Sheet1");
+		
+		String Applicant_Name = td.get(RowNumber).get("Applicant_Name");
+		String Mobile_Number = td.get(RowNumber).get("Mobile_Number");
+		String Email = td.get(RowNumber).get("Email");			

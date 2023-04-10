@@ -1,0 +1,13 @@
+package org.sanity.run;
+
+import org.base.BaseClass;
+
+public class Common_Run extends BaseClass{
+	
+private void commonExecution() {
+
+	Live_Sanity_Run.PreLoginExecution();
+	
+}	
+	
+}

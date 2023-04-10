@@ -1,0 +1,14 @@
+
+package org.api.test;
+
+public class RestAssured {
+
+	public void demo() {
+
+		RestAssured.base
+
+	}
+	
+	
+	
+}

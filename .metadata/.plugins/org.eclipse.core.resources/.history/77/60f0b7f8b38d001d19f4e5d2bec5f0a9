@@ -1,0 +1,55 @@
+package Calculator;
+
+import java.util.Scanner;
+
+public class Business_Loan_Calculator {
+
+	public static void main(String[] args) {
+
+		String  ATO = "Annual Turnover";
+		S
+
+		System.out.println("Enter user's " + ATO + ": ");
+		Scanner s = new Scanner(System.in);
+		int nextLine = s.nextInt();
+		System.out.println("Your " + ATO + " is " + nextLine);
+
+		System.out.println("Enter user's " + " Profit Margin " + ": ");
+		int nextLine1 = s.nextInt();
+		System.out.println("User's " +" Profit Margin "+ " is " + nextLine1);
+		
+		int a = 4000000;
+		int b = 10000000;
+		int c = 30000000;
+		double max_Manufacturing_Percent = 0.15; 
+		double max_Service_Percent = 0.17;
+		double max_Trading_Percent = 0.07;
+		int =;
+		
+		
+		if (nextLine1 >= a && nextLine1 <= b) {
+			
+			System.out.println("50%");
+			
+		} else if(b <= nextLine1 && c >= nextLine1) {
+			
+			System.out.println("55%");
+			
+		}
+		
+		else if (nextLine1 > c) {
+			
+			System.out.println("60%");
+		} 
+		
+		else {
+			
+			System.out.println("Entered amount is "+nextLine1+" is lower than " + a);
+		}
+		
+//		(A*Min(C,D))/12
+		
+		double formula = nextLine1 ;
+		
+	}
+}

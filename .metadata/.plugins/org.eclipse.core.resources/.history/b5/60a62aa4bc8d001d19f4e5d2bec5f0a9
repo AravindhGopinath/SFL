@@ -1,0 +1,71 @@
+package Calculator;
+
+import java.util.Scanner;
+
+public class Business_Loan_Calculator {
+
+	public static void main(String[] args) {
+
+
+		System.out.println("Enter user's " + " Annual Turnover " + ": ");
+		Scanner s = new Scanner(System.in);
+		int Annual_Turnover = s.nextInt();
+		System.out.println("Your " + " Annual Turnover " + " is " + Annual_Turnover);
+
+		System.out.println("Enter user's " + " Profit Margin " + ": ");
+		int Profit_Margin_Declared = s.nextInt();
+		System.out.println("User's " +" Profit Margin "+ " is " + Profit_Margin_Declared);
+		
+		int a = 4000000;
+		int b = 10000000;
+		int c = 30000000;
+		
+//		double[] array = {0.15,0.17,0.07};
+		
+		
+		
+		
+		if (Annual_Turnover >= a && Annual_Turnover <= b) {
+			
+			System.out.println("50%");
+			
+		} 
+		else if(b <= Annual_Turnover && c >= Annual_Turnover) {
+			
+			System.out.println("55%");
+			
+		}
+		
+		else if (Annual_Turnover > c) {
+			
+			System.out.println("60%");
+		} 
+		
+		else {
+			
+			System.out.println("Entered amount is "+Annual_Turnover+" is lower than " + a);
+		}
+		
+		int max_Manufacturing_Percent = 15; 
+		int max_Service_Percent = 17;
+		int max_Trading_Percent = 7;
+		
+		if (Profit_Margin_Declared>=max_Manufacturing_Percent  ) {
+			
+
+			System.out.println(max_Manufacturing_Percent);
+		}
+		
+		else if (Profit_Margin_Declared < max_Manufacturing_Percent ) {
+			
+			System.out.println(Profit_Margin_Declared);
+			
+		}
+		
+//		(A*Min(C,D))/12
+		
+		double formula = (Math.min(Annual_Turnover,Profit_Margin_Declared)) ;
+		
+		System.out.println(formula);
+	}
+}

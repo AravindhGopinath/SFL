@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="RD(failed)">
+    <classes>
+      <class name="org.sanity.run.Sanity_Run">
+        <methods>
+          <include name="browserLaunch"/>
+          <include name="fdExecution"/>
+          <include name="browserQuit"/>
+        </methods>
+      </class> <!-- org.sanity.run.Sanity_Run -->
+    </classes>
+  </test> <!-- RD(failed) -->
+</suite> <!-- Failed suite [Suite] -->

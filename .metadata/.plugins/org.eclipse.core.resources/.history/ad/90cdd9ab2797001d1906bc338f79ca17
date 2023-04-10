@@ -1,0 +1,22 @@
+
+package org.api.test;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.specification.RequestSpecification;
+
+
+public class RestAssuredd {
+
+	private void demo() {
+
+		RestAssured.baseURI="";
+		RequestSpecification given = RestAssured.given();
+		
+		given.request(Method.GET);
+		
+	}
+	
+	
+	
+}

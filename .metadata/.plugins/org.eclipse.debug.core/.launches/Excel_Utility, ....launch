@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.testng.eclipse.launchconfig">
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="untitled"/>
+<mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
+<listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
+<listEntry value="LibGloabal.BaseClass"/>
+<listEntry value="X_paths.Minor_Pan_Xpaths"/>
+<listEntry value="X_paths.Payment_Failure_Xpaths"/>
+<listEntry value="X_paths.Guardian_Personal_Details_Xpaths"/>
+<listEntry value="X_paths.Bank_Details_Xpaths"/>
+<listEntry value="PreExecutions.Coding_Class"/>
+<listEntry value="X_paths.Additional_Details_Xpaths"/>
+<listEntry value="X_paths.Star_Xpaths"/>
+<listEntry value="Iteration.Read_Excel"/>
+<listEntry value="Main_R.Running_Class"/>
+<listEntry value="X_paths.Personal_Details_Xpaths"/>
+<listEntry value="Iteration.Excel_Utility"/>
+<listEntry value="X_paths.LandingPage_Xpaths"/>
+<listEntry value="Main_R.TestClass"/>
+<listEntry value="Main_R.EmailSending"/>
+<listEntry value="X_paths.Pan_Details_Xpaths"/>
+<listEntry value="X_paths.Ckyc_Xpaths"/>
+<listEntry value="X_paths.SchemeDetails_Xpaths"/>
+<listEntry value="X_paths.Guardian_Ckyc_xpaths"/>
+<listEntry value="X_paths.PennyDrop_Xpaths"/>
+</listAttribute>
+<listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
+<listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>
+<stringAttribute key="org.testng.eclipse.PRE_DEFINED_LISTENERS" value=""/>
+<intAttribute key="org.testng.eclipse.TYPE" value="1"/>
+</launchConfiguration>

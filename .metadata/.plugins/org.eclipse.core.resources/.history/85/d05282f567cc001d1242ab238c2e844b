@@ -1,0 +1,22 @@
+package org.run;
+
+import org.base.BaseClass;
+import org.testng.annotations.Test;
+
+public class Execution extends BaseClass{
+
+	@Test
+	private void launch() {
+
+		headless("edge");
+		
+		loadUrl("https://www.shriramfinance.in/");
+	
+		String title = driver.getTitle();
+		
+		System.out.println("Print : "+title);
+		
+	}
+	
+	
+}

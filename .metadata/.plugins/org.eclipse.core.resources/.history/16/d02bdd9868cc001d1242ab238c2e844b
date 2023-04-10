@@ -1,0 +1,22 @@
+package org.run;
+
+import org.base.BaseClass;
+import org.testng.annotations.Test;
+
+public class Execution extends BaseClass{
+
+	@Test
+	private void launch() {
+
+		headless("firefox");
+		
+		loadUrl("https://www.glassdoor.co.in/Reviews/Novac-Technology-Solutions-Chennai-Reviews-EI_IE2883613.0,26_IL.27,34_IM1067.htm?filter.iso3Language=eng");
+	
+		String title = driver.getTitle();
+		
+		System.out.println("Print : "+title);
+		
+	}
+	
+	
+}
